@@ -1,33 +1,31 @@
-import ExprenseItem from "./components/ExpenseItem";
-// import logo from './logo.svg';
-// import './App.css';
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
+import Expenses from './components/Expenses.js';
 
 function App(){
+
+  const expenses = [
+    {
+      id:'e1',
+      title:'Car Insurance',
+      amount: 100,
+      date: new Date(2021, 2, 26)
+    },
+    {
+      id:'e2',
+      title:'New Desk (Wooden)',
+      amount: 100,
+      date: new Date(2021, 2, 26)
+    },
+    {
+      id:'e2',
+      title:'New TV',
+      amount: 100,
+      date: new Date(2021, 2, 26)
+    }
+  ];
+  
   return(
     <div>
-      <p>React application</p>
-      <ExprenseItem></ExprenseItem>
+      <Expenses items={expenses}/>
     </div>
   );
 }
